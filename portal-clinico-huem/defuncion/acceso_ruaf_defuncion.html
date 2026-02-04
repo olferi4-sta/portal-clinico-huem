@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso RUAF – Certificado de Defunción</title>
+
+<style>
+:root{
+  --azul:#1e88e5;
+  --rojo:#c62828;
+  --gris:#f4f6f8;
+  --blanco:#ffffff;
+}
+
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:var(--gris);
+}
+
+/* HEADER */
+header{
+  background:var(--rojo);
+  color:white;
+  padding:18px;
+  text-align:center;
+}
+
+header h1{
+  margin:0;
+  font-size:20px;
+}
+
+/* CONTENEDOR */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+/* SECCIONES */
+.section{
+  background:var(--blanco);
+  border-radius:14px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.section h2{
+  margin-top:0;
+  font-size:18px;
+  color:#333;
+  border-bottom:1px solid #eee;
+  padding-bottom:8px;
+}
+
+/* TEXTO */
+.texto{
+  font-size:14px;
+  color:#555;
+  line-height:1.6;
+}
+
+/* LISTA */
+ul{
+  font-size:14px;
+  color:#555;
+  padding-left:20px;
+}
+
+/* BOTONES */
+.actions{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.btn{
+  padding:12px 26px;
+  border-radius:25px;
+  text-decoration:none;
+  font-size:14px;
+  color:white;
+  display:inline-block;
+  text-align:center;
+}
+
+.btn-ruaf{
+  background:var(--rojo);
+}
+
+.btn-ruaf:hover{
+  background:#b71c1c;
+}
+
+.btn-back{
+  background:var(--azul);
+}
+
+.btn-back:hover{
+  background:#1565c0;
+}
+
+.btn-caso{
+  background:#6d4c41;
+}
+
+.btn-caso:hover{
+  background:#4e342e;
+}
+
+/* CAJA CREDENCIALES */
+.credenciales{
+  background:#f9f9f9;
+  border:1px dashed #ccc;
+  border-radius:10px;
+  padding:15px;
+  font-size:14px;
+}
+
+/* MÓVIL */
+@media(max-width:480px){
+  header h1{font-size:18px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Acceso RUAF – Certificado de Defunción</h1>
+</header>
+
+<div class="container">
+
+  <!-- INFORMACIÓN GENERAL -->
+  <div class="section">
+    <h2>📄 Información de Capacitación</h2>
+    <p class="texto">
+      Para el diligenciamiento del <b>Certificado de Defunción</b>, el acceso al
+      sistema RUAF – ND se realiza a través del entorno de capacitación dispuesto
+      por el Ministerio de Salud y Protección Social.
+    </p>
+
+    <p class="texto">
+      Este entorno permite realizar simulaciones académicas y prácticas formativas,
+      sin generar registros oficiales, y está orientado a procesos de capacitación
+      del talento humano en salud y áreas administrativas.
+    </p>
+  </div>
+
+  <!-- CREDENCIALES -->
+  <div class="section">
+    <h2>🔐 Usuarios Genéricos de Prueba</h2>
+
+    <div class="credenciales">
+      <p><b>Usuario IPS:</b> CCPRUEBAIPSNDV2</p>
+      <p><b>Usuario Secretarías:</b> CCPRUEBASDSNDV2</p>
+      <p><b>Usuario RNEC:</b> CCPRUEBAREGNDV2</p>
+      <p><b>Clave (todos los usuarios):</b> USUARIONDv2</p>
+    </div>
+
+    <p class="texto" style="margin-top:10px">
+      Los usuarios genéricos permiten simular el acceso conforme al tipo de entidad
+      participante en el proceso de certificación de defunción.
+    </p>
+  </div>
+
+  <!-- ROLES -->
+  <div class="section">
+    <h2>👥 Roles Asociados</h2>
+    <ul>
+      <li>Profesional de Salud</li>
+      <li>Auditor Médico</li>
+      <li>Estadístico Vital</li>
+      <li>Anulador</li>
+    </ul>
+  </div>
+
+  <!-- ACCIONES -->
+  <div class="section">
+    <h2>🔗 Acciones</h2>
+    <div class="actions">
+
+      <!-- Descargar Caso Clínico Simulado -->
+      <a href="../assets/CASO_CLINICO_DEFUNCION_SIMULADO.pdf"
+         target="_blank"
+         class="btn btn-caso">
+        Descargar Caso Clínico Simulado
+      </a>
+
+      <!-- Ingreso RUAF -->
+      <a href="https://tablas.sispro.gov.co/NDv2/Login?ReturnUrl=%2fNDv2"
+         target="_blank"
+         class="btn btn-ruaf">
+        Ingresar al RUAF – ND
+      </a>
+
+      <!-- Volver -->
+      <a href="../index.html" class="btn btn-back">
+        Volver al menú principal
+      </a>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
