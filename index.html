@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<h<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal Clínico Digital – HUEM</title>
+
+<style>
+:root{
+  --azul:#1e88e5;
+  --azul-osc:#1565c0;
+  --verde:#2e7d32;
+  --rojo:#c62828;
+  --gris:#f4f6f8;
+  --blanco:#ffffff;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:var(--gris);
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,var(--azul),var(--azul-osc));
+  color:white;
+  padding:22px;
+  text-align:center;
+}
+
+header h1{
+  margin:0;
+  font-size:22px;
+}
+
+header p{
+  margin-top:6px;
+  font-size:14px;
+  opacity:0.9;
+}
+
+/* CONTENEDOR */
+.container{
+  padding:25px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+
+/* TARJETAS */
+.card{
+  background:var(--blanco);
+  border-radius:16px;
+  padding:28px 22px;
+  text-align:center;
+  box-shadow:0 8px 22px rgba(0,0,0,0.08);
+  transition:transform .2s, box-shadow .2s;
+  cursor:pointer;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 14px 30px rgba(0,0,0,0.12);
+}
+
+.icon{
+  font-size:48px;
+  margin-bottom:15px;
+}
+
+.card h2{
+  margin:0;
+  font-size:18px;
+  color:#333;
+}
+
+.card p{
+  font-size:14px;
+  color:#666;
+  margin:10px 0 18px;
+}
+
+/* BOTÓN */
+.btn{
+  display:inline-block;
+  padding:10px 22px;
+  border-radius:25px;
+  text-decoration:none;
+  font-size:14px;
+  color:white;
+}
+
+/* COLORES POR MÓDULO */
+.btn-evolucion{background:var(--azul)}
+.btn-consentimiento{background:#6a1b9a}
+.btn-nacimiento{background:var(--verde)}
+.btn-defuncion{background:var(--rojo)}
+
+.btn:hover{opacity:0.9}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  font-size:12px;
+  color:#777;
+  padding:18px;
+}
+
+/* MÓVIL */
+@media(max-width:480px){
+  header h1{font-size:18px}
+  .icon{font-size:42px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Portal Clínico Digital</h1>
+  <p>Hospital Universitario Erasmo Meoz</p>
+</header>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- Evoluciones -->
+    <div class="card" onclick="location.href='evolucion/evolucion_caso.html'">
+      <div class="icon">🩺</div>
+      <h2>Evoluciones Médicas</h2>
+      <p>Registro, consulta y seguimiento de la evolución clínica.</p>
+      <a href="evolucion/evolucion_caso.html" class="btn btn-evolucion">
+        Ingresar
+      </a>
+    </div>
+
+    <!-- Consentimiento -->
+    <div class="card" onclick="location.href='consentimiento/consentimiento_caso.html'">
+      <div class="icon">📄</div>
+      <h2>Consentimiento Informado</h2>
+      <p>Diligenciamiento y gestión del consentimiento del paciente.</p>
+      <a href="consentimiento/consentimiento_caso.html" class="btn btn-consentimiento">
+        Ingresar
+      </a>
+    </div>
+
+    <!-- Nacimiento -->
+    <div class="card" onclick="location.href='nacido_vivo/acceso_ruaf_nacido_vivo.html'">
+      <div class="icon">👶</div>
+      <h2>Nacimientos</h2>
+      <p>Acceso al RUAF – Certificado de Nacido Vivo (capacitación).</p>
+      <a href="nacido_vivo/acceso_ruaf_nacido_vivo.html" class="btn btn-nacimiento">
+        Ingresar
+      </a>
+    </div>
+
+    <!-- Defunción -->
+    <div class="card" onclick="location.href='defuncion/acceso_ruaf_defuncion.html'">
+      <div class="icon">⚰️</div>
+      <h2>Defunciones</h2>
+      <p>Acceso al RUAF – Certificado de Defunción (capacitación).</p>
+      <a href="defuncion/acceso_ruaf_defuncion.html" class="btn btn-defuncion">
+        Ingresar
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © 2026 – Portal Clínico Digital | HUEM
+</footer>
+
+</body>
+</html>
